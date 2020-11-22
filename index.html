@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Family Book</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <p id="firstp">MY FAMILY BOOK</p>
+    <img id="album" src="https://i.pinimg.com/474x/fb/02/3a/fb023a96d61a0c5e9a3a38beb1dede1f.jpg">
+
+    <p id="membertext"></p>
+    <p id="membername"></p>
+    <div>
+        <button id="qwerty" type="button" onclick="nextslide()"> Next </button>
+    </div>
+    <script>
+        var mname = [
+            "Gopal Naredy",
+            "Sushila Naredy",
+            "Vibhay Agarwal",
+            "Anuradha Agarwal",
+            "Raghav Agarwal",
+            "Shourya Agarwal"
+        ];
+
+        var images = [
+            "https://i.pinimg.com/originals/d5/6c/d2/d56cd25436d0d3f56ad2f143750f7455.png",
+            "https://i.pinimg.com/originals/db/f5/08/dbf508e27715f8ed3730bec349092789.jpg",
+            "https://previews.123rf.com/images/jemastock/jemastock1806/jemastock180602277/102903734-cute-father-cartoon-vector-illustration-graphic-design.jpg",
+            "https://cdn.clipart.email/6c4fb19ec8d337aed513733449a84dd1_mother-png-clipart-arm-boy-cartoon-cartoon-mother-child-free-_728-1019.jpeg",
+            "https://cdn.clipart.email/d7c073ea2d3a141521766e881c8c1b2b_older-brother-clipart-clip-art-library_731-1118.jpeg",
+            "https://cdn.clipart.email/52a1777081a646b2b8c552f6b32c33ac_library-of-baby-brother-svg-free-stock-png-files-clipart-_1056-1300.jpeg"
+        ];
+
+        var mtext = [
+            "My Grandfather",
+            "My Grandmother",
+            "My Father",
+            " My Mother",
+            "Me",
+            "My Little Brother"
+        ]
+
+        var i = 0;
+        function nextslide() {
+            if (i < 6) {
+                document.getElementById("membertext").innerHTML = mtext[i];
+                document.getElementById("album").src = images[i];
+                document.getElementById("membername").innerHTML = mname[i];
+                i++;
+            }
+        } 
+    </script>
+</body>
+
+</html>
